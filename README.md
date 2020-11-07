@@ -6,9 +6,7 @@ You have a function that takes an `Option<T>` but writing `f(Some(value))` inste
 
 Before: 
 ```rust
-fn f(v: Option<u32>) {
-   
-}
+fn f(v: Option<u32>) { }
 
 f(Some(10));
 ```
@@ -16,9 +14,7 @@ f(Some(10));
 After:
 
 ```rust
-fn f(v: impl Into<Option<u32>>) {
-   
-}
+fn f(v: impl Into<Option<u32>>) { }
 
 f(10);
 ```
